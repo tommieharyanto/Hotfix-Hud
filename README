@@ -8,19 +8,19 @@ While working on the fix I learned more about how the code works and I decided t
 
 MAIN FEATURES:
 
-    * Integrated into the options.
-	* 5 hud layouts! Default, Centered, Compact, the new Hotbar hud and the new Cross Hud!
-	* Custom loadingscreen.
-    * For all the layouts (exept Hotbar) you have a choice of 3 color schemes:
-	 - The Superpie hud color scheme. (Default)
-     - The Warrior hud color scheme. Based off the Warrior's Hud by Warrior.
-     - The Hellrider hud color scheme. Based off the Hellrider Hud (v1.1) by Hellrider.
-    * The option to place the Adv. Good barbs underneath the crosshair.
-    * Optional fullscreen radar.
-	* Optional stamina progress bar!
-    * Optional Human crosshair dot in 4 colors: white, blue, red and black.
-	* Option menu to change the appearance of the console.
-	* Mostly Unvanquished compatible!
+* Integrated into the options.
+* 5 hud layouts! Default, Centered, Compact, the new Hotbar hud and the new Cross Hud!
+* Custom loadingscreen.
+* For all the layouts (exept Hotbar) you have a choice of 3 color schemes:
+	- The Superpie hud color scheme. (Default)
+	- The Warrior hud color scheme. Based off the Warrior's Hud by Warrior.
+	- The Hellrider hud color scheme. Based off the Hellrider Hud (v1.1) by Hellrider.
+* The option to place the Adv. Good barbs underneath the crosshair.
+* Optional fullscreen radar.
+* Optional stamina progress bar!
+* Optional Human crosshair dot in 4 colors: white, blue, red and black.
+* Option menu to change the appearance of the console.
+* Mostly Unvanquished compatible!
 	
 NOTES:
 All "hud_" (exept "hud_style") commands get applied immediately, so there is no need to restart.
