@@ -1,0 +1,26 @@
+//BLOB
+itemDef
+{
+	name "blob"
+	rect 305 385 52 18
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	cvartest hud_blobCenter
+	hideCvar {1}
+	forecolor A_BLOB
+	background "ui/assets/alien/tremublob.tga"
+	ownerdraw CG_PLAYER_POISON_BARBS
+}
+
+itemDef
+{
+	name "blob"
+	rect 313.4 245 13 40
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	cvartest hud_blobCenter
+	showCvar {1}
+	forecolor A_BLOB
+	background "ui/assets/alien/tremublob.tga"
+	ownerdraw CG_PLAYER_POISON_BARBS
+}

@@ -1,0 +1,11 @@
+//BLOB
+itemDef
+{
+	name "blob"
+	rect 300 250 40 13
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	forecolor A_BLOB
+	background "ui/assets/alien/tremublob.tga"
+	ownerdraw CG_PLAYER_POISON_BARBS
+}

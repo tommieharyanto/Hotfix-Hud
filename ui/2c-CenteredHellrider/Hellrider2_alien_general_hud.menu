@@ -1,0 +1,19 @@
+#include "ui/menudef.h"
+
+{
+
+#define W 640
+#define H 480
+
+menuDef
+ {
+	name "alien_general_hud"
+	fullScreen MENU_FALSE
+	visible MENU_TRUE
+	rect 0 0 W H
+	aspectBias ASPECT_NONE
+	
+	#include "ui/2c-CenteredHellrider/Hellrider2_alien_common_hud.menu"
+	#include "ui/common/layout/Centered_alien_general_hud.menu"
+ }
+}

@@ -1,0 +1,309 @@
+#include "ui/menudef.h"
+
+{
+  \\ HUD \\
+
+#define X             0
+#define Y             215
+#define W             250
+#define H             ((9*(ELEM_H+ELEM_GAP))+260)
+#define TOFF_X        (0-(W/2))
+#define ELEM_H        14
+#define ELEM_GAP      4
+#define BUTT_W        35
+#define BUTT_H        35
+#define LIST_H		  22.5
+#define BORDER        10
+#define RESCOMBO_OFF  8
+
+  menuDef
+  {
+    name "huds"
+    visible MENU_FALSE
+    fullscreen MENU_FALSE
+    rect (320-(W/2)) (240-(H/2)) W H
+    focusColor 1 .75 0 1
+    style WINDOW_STYLE_FILLED
+    border WINDOW_BORDER_FULL
+    popup
+    onEsc
+    {
+      close huds
+    }
+    onOpen
+    {
+      uiScript loadhuds
+    }
+
+    itemDef
+    {
+      name window
+      rect -50 0 (W+100) H
+      style WINDOW_STYLE_SHADER
+      background "ui/assets/vertgrad.tga"
+      forecolor MENU_TEAL_TRANS
+      visible MENU_TRUE
+      decoration
+
+      border WINDOW_BORDER_KCGRADIENT
+      borderSize 1.0
+      borderColor 1 1 1 1
+    }
+
+    itemDef
+    {
+		name title
+		type ITEM_TYPE_TEXT
+		text "Select a HUD"
+		textstyle ITEM_TEXTSTYLE_PLAIN
+		style WINDOW_STYLE_EMPTY
+		rect 80 -77.5 200 100
+		textscale .4
+		visible MENU_TRUE
+		forecolor 1 1 1 1
+		decoration
+	}
+
+    itemDef
+    {
+		name hudpreview
+		style WINDOW_STYLE_EMPTY
+		ownerdraw UI_SELECTEDHUDPREVIEW
+		rect 45 30 160 120
+		border WINDOW_BORDER_FULL
+		bordercolor .5 .5 .5 1
+		visible MENU_TRUE
+	}
+
+    itemDef
+    {
+      name hudlist
+      rect BORDER 160 (W-(2*BORDER)) (LIST_H*3)
+      type ITEM_TYPE_LISTBOX
+      style WINDOW_STYLE_EMPTY
+      elementwidth 120
+      elementheight 20
+      textscale .25
+      elementtype LISTBOX_TEXT
+      feeder FEEDER_HUDS
+      textalign 3
+      textaligny 14
+      border WINDOW_BORDER_KCGRADIENT
+      bordercolor   0.5 0.5 0.5 0.5
+      forecolor     1   1   1   1
+      backcolor     0.2 0.2 0.2 1
+      outlinecolor  0.1 0.1 0.1 0.5
+      visible MENU_TRUE
+      doubleClick
+      {
+        play "sound/misc/menu1.wav";
+      }
+    }
+
+		itemDef
+		{
+			type ITEM_TYPE_YESNO
+			text "Enable Custom HUDs:"
+			cvar "cg_hudFilesEnable"
+			rect X (Y+(ELEM_H+ELEM_GAP)) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				uiScript update cg_hudFilesEnable;
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_YESNO
+			text "On-screen Stage Report:"
+			cvar "hud_nonScoreStageReport"
+			rect X (Y+(2*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_YESNO
+			text "Fullscreen Scanner:"
+			cvar "hud_scannerFullScreen"
+			rect X (Y+(3*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_MULTI
+			text "Console:"
+			cvar "hud_consoleSize"
+			cvarStrList { "Tiny", "0", "Small", "1", "Default", "2", "Big", "3", "Centered Tiny", "4", "Centered Small", "5", "Centered Default", "6", "Centered Big", "7" }
+			rect X (Y+(4*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_MULTI
+			text "Team Overlay:"
+			cvar "hud_teamoverlayLocation"
+			cvarStrList { "Center Left", "0", "Bottom Left", "1", "Center Right", "2", "Bottom Right", "3" }
+			rect X (Y+(5*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_MULTI
+			text "Human Dot Crosshair:"
+			cvar "hud_dotXhairs"
+			cvarStrList { "Off", "0", "Blue", "1", "Red", "2", "White", "3", "Black", "4" }
+			rect X (Y+(6*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_MULTI
+			text "Inventory:"
+			cvar "hud_inventory"
+			cvarStrList { "Center", "0", "Right 4:3", "1", "Right 16:10", "2", "Right 16:9" }
+			rect X (Y+(7*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_YESNO
+			text "Centered Barbs:"
+			cvar "hud_blobCenter"
+			rect X (Y+(8*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+		itemDef
+		{
+			type ITEM_TYPE_MULTI
+			text "Stamina Bar:"
+			cvar "hud_staminaElevation"
+			cvarStrList { "No (default)", "0", "Centered", "1", "Integrated", "2" }
+			rect X (Y+(9*(ELEM_H+ELEM_GAP))) W ELEM_H
+			textalign ALIGN_RIGHT
+			textalignx TOFF_X
+			textvalign VALIGN_CENTER
+			textscale .25
+			forecolor 1 1 1 1
+			visible MENU_TRUE
+			action
+			{
+				play "sound/misc/menu1.wav";
+			}
+		}
+
+    itemDef
+    {
+      name Select
+      text "Select"
+      type ITEM_TYPE_BUTTON
+      textscale .25
+      rect (W-(2*BUTT_W)) (H-BUTT_H) BUTT_W BUTT_H
+      textalign ALIGN_CENTER
+      textvalign VALIGN_CENTER
+      forecolor 1 1 1 1
+      visible MENU_TRUE
+      action
+      {
+        play "sound/misc/menu1.wav";
+        uiScript applyHud ;
+        setcvar cg_hudFilesEnable 1 ;
+        close huds;
+      }
+    }
+
+    itemDef
+    {
+      name cancel
+      text "Cancel"
+      type ITEM_TYPE_BUTTON
+      textscale .25
+      rect (W-BUTT_W) (H-BUTT_H) BUTT_W BUTT_H
+      textalign ALIGN_CENTER
+      textvalign VALIGN_CENTER
+      forecolor 1 1 1 1
+      visible MENU_TRUE
+      action
+      {
+        play "sound/misc/menu3.wav";
+        close huds ;
+      }
+    }
+  }
+}

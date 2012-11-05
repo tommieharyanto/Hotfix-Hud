@@ -1,0 +1,7 @@
+#define COMMON_HUD_R 1
+#define COMMON_HUD_G 0
+#define COMMON_HUD_B 0
+#define COMMON_HUD_T .4
+#include "ui/common/common_hud.cfg"
+#include "ui/common/color/Superpie.cfg"
+#include "ui/common/layout/Centered_alien_common_hud.menu"

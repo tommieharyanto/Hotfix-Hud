@@ -1,0 +1,363 @@
+//////////////////
+//////STATIC//////
+//////////////////
+
+//BACKDROP
+itemDef
+{
+	name "backdrop"
+	rect 290 265 60 10
+	style WINDOW_STYLE_FILLED
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+}
+
+//////////////////
+///////BARS///////
+//////////////////
+
+//HEALTHBAR
+itemDef
+{
+	name "healthbar"
+	rect 290 265 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_HEALTHBAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_HEALTH_BAR
+}
+
+//STAMINABAR
+itemDef
+{
+	name "staminabar"
+	rect 290 272 60 3
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_STAMINABAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_STAMINA
+}
+
+//AMMOBAR
+itemDef
+{
+	name "ammobar"
+	rect 290 275 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_AMMOBAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_AMMO_STACK
+}
+
+//BUILDTIMERBAR
+itemDef
+{
+	name "buildtimerbar"
+	rect 290 275 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_BUILDTIMERBAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_BUILD_TIMER_BAR
+}
+
+//CLIPSBAR
+itemDef
+{
+	name "ammobar"
+	rect 290 282 60 3
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_CLIPSBAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_CLIPS_STACK
+}
+
+//CHARGE BAR
+itemDef
+{
+	name "charge"
+	rect 290 200 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_CHARGEBAR
+	ownerdraw CG_PLAYER_CHARGE_BAR
+	background "ui/assets/human/buildstat/health.tga"
+}
+
+//CHARGE BAR BG
+itemDef
+{
+	name "chargebg"
+	rect 290 200 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_CHARGEBARBG
+	ownerdraw CG_PLAYER_CHARGE_BAR_BG
+	background "ui/assets/human/buildstat/health.tga"
+}
+
+///////////////////
+//DYNAMIC OBJECTS//
+///////////////////
+
+//CROSS
+itemDef
+{
+	name "cross"
+	rect 290 264 12 12
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_CROSS
+	ownerdraw CG_PLAYER_HEALTH_CROSS
+}
+
+//BOLT
+itemDef
+{
+	name "bolt"
+	rect 345 265 5 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_BOLTFORE
+	backColor H_BOLTBACK
+	background "ui/assets/human/bolt.tga"
+	ownerdraw CG_PLAYER_STAMINA_BOLT
+}
+
+//HEALTH
+itemDef
+{
+	name "health"
+	rect 302 265 25 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_HEALTH
+	addColorRange 0 24 H_HEALTHRANGE1
+	addColorRange 25 74 H_HEALTHRANGE2
+	addColorRange 75 99 H_HEALTHRANGE3
+	ownerdraw CG_PLAYER_HEALTH
+}
+
+//CREDITS
+itemDef
+{
+	name "credits"
+	rect 308 285 25 8
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_CREDITS
+	ownerdraw CG_PLAYER_CREDITS_VALUE
+}
+
+//WEAPON ICON
+itemDef
+{
+	name "weapon"
+	rect 288 274 12 12
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_WEAPONICON
+	ownerdraw CG_PLAYER_WEAPONICON
+}
+
+//AMMO
+itemDef
+{
+	name "ammo"
+	rect 308 275 25 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_AMMO
+	ownerdraw CG_PLAYER_TOTAL_AMMO_VALUE
+	textalign ALIGN_CENTER
+}
+
+//WEAPON SELECT TEXT
+itemDef
+{
+	name "selecttext"
+	rect 200 315 240 25
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	textScale .5
+	ownerdraw CG_PLAYER_SELECTTEXT
+	textstyle ITEM_TEXTSTYLE_SHADOWED
+}
+
+//USABLE
+itemDef
+{
+	name "usable"
+	rect 308 227 25 25
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_USEABLE
+	background "ui/assets/neutral/use.tga"
+	ownerdraw CG_PLAYER_USABLE_BUILDABLE
+}
+
+//SCANNER
+itemDef
+{
+	name "scannerfs"
+	rect 0 0 640 480
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	cvartest hud_scannerFullScreen
+	showCvar {1}
+	decoration
+	forecolor .5 .5 .5 .3
+	background "gfx/null.tga"
+	ownerdraw CG_PLAYER_HUMAN_SCANNER
+}
+
+itemDef
+{
+	name "scanner"
+	rect 164 340 312 72
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	cvartest hud_scannerFullScreen
+	hideCvar {1}
+	decoration
+	forecolor H_SCANNER
+	background "ui/assets/human/scanner.tga"
+	ownerdraw CG_PLAYER_HUMAN_SCANNER
+}
+
+//SELECTED
+itemDef
+{
+	name "selected"
+	rect 301 295 40 15
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_SCANNER
+	style WINDOW_STYLE_SHADER
+	background "ui/assets/neutral/selected.tga"
+}
+
+//INVENTORY
+itemDef
+{
+	name "inventory"
+	rect 238 295 175 15 // (Center)
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor H_INVENTORY
+	ownerdraw CG_PLAYER_SELECT
+}
+
+//SPECTATOR TEXT
+itemDef
+{
+	name "followtext"
+	rect 200 200 240 25
+	foreColor 1 1 1 1
+	aspectBias ALIGN_CENTER
+	textalign ALIGN_CENTER
+	textvalign VALIGN_TOP
+	visible MENU_TRUE
+	decoration
+	textScale .5
+	textStyle ITEM_TEXTSTYLE_SHADOWED
+	ownerdraw CG_FOLLOW
+}
+
+//STAGE REPORT
+itemDef
+{
+	name stagereport
+	textalign ALIGN_CENTER
+	textvalign VALIGN_CENTER
+	textscale 0.3
+	rect 220 450 200 30
+	forecolor H_STAGEREPORT
+	decoration
+	visible MENU_TRUE
+	cvartest hud_nonScoreStageReport
+	showCvar {1}
+	ownerdraw CG_STAGE_REPORT_TEXT
+}
+
+//CROSSHAIR DOT
+itemDef
+{
+	name "crosshairblue"
+	rect 319 239 2 2
+	visible 1
+	cvartest hud_dotXhairs
+	showCvar {1}
+	decoration
+	forecolor 0 .8 1 0.5
+	style WINDOW_STYLE_SHADER
+	background "ui/assets/neutral/circle.tga"
+}
+
+itemDef
+{
+	name "crosshairred"
+	rect 319 239 2 2
+	visible 1
+	cvartest hud_dotXhairs
+	showCvar {2}
+	decoration
+	forecolor 1 0 0 0.5
+	style WINDOW_STYLE_SHADER
+	background "ui/assets/neutral/circle.tga"
+}
+
+itemDef
+{
+	name "crosshairgray"
+	rect 319 239 2 2
+	visible 1
+	cvartest hud_dotXhairs
+	showCvar {3}
+	decoration
+	forecolor 0.5 0.5 0.5 0.5
+	style WINDOW_STYLE_SHADER
+	background "ui/assets/neutral/circle.tga"
+}
+
+itemDef
+{
+	name "crosshairblack"
+	rect 319 239 2 2
+	visible 1
+	cvartest hud_dotXhairs
+	showCvar {4}
+	decoration
+	forecolor 0 0 0 0.5
+	style WINDOW_STYLE_SHADER
+	background "ui/assets/neutral/circle.tga"
+}

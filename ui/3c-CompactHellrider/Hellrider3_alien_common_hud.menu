@@ -1,0 +1,7 @@
+#define COMMON_HUD_R 0.5
+#define COMMON_HUD_G 0.5
+#define COMMON_HUD_B 0.5
+#define COMMON_HUD_T 0.1
+#include "ui/common/common_hud.cfg"
+#include "ui/common/color/Hellrider.cfg"
+#include "ui/common/layout/Compact_alien_common_hud.menu"

@@ -1,0 +1,25 @@
+#include "ui/menudef.h"
+
+{
+
+#define W 640
+#define H 480
+
+	menuDef
+	{
+		name "human_hud"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 W H
+		aspectBias ASPECT_NONE
+
+#define COMMON_HUD_R 0
+#define COMMON_HUD_G .8
+#define COMMON_HUD_B 1
+#define COMMON_HUD_T .4
+#include "ui/common/common_hud.cfg"
+#include "ui/common/color/EMxp.cfg"
+#include "ui/common/layout/Cross_human_hud.menu"
+
+	}
+}

@@ -1,0 +1,25 @@
+//BUILD POINTS
+itemDef
+{
+	name "build-points"
+	rect 280 290 60 15
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_BUILDPOINTS
+	ownerdraw CG_PLAYER_AMMO_VALUE
+}
+
+//BUILDTIMERBAR
+itemDef
+{
+	name "buildtimerbar"
+	rect 290 275 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_BUILDBAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_BUILD_TIMER_BAR
+}

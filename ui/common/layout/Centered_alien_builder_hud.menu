@@ -1,0 +1,23 @@
+//BUILD TIMER
+itemDef
+{
+	name "buildtimer"
+	rect 409.5 410 25 25
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_BUILDTIMER
+	ownerdraw CG_PLAYER_BUILD_TIMER
+}
+
+//BUILD POINTS
+itemDef
+{
+	name "build-points"
+	rect 330 421 60 15
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_BUILDPOINTS
+	ownerdraw CG_PLAYER_AMMO_VALUE
+}

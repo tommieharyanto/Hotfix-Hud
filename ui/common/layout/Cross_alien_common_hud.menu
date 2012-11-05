@@ -1,0 +1,195 @@
+//////////////////
+//////STATIC//////
+//////////////////
+//BACKDROP
+itemDef
+{
+	name "backdrop"
+	rect 290 265 60 7
+	style WINDOW_STYLE_FILLED
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+}
+
+//////////////////
+///////BARS///////
+//////////////////
+
+//HEALTHBAR
+itemDef
+{
+	name "healthbar"
+	rect 290 265 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_HEALTHBAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_HEALTH_BAR
+}
+
+//BOOSTED 1
+itemDef
+{
+	name "boostbar"
+	rect 290 272 60 3
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_BOOSTBAR
+	backColor BARBG
+	background "ui/assets/human/buildstat/health.tga"
+	ownerdraw CG_PLAYER_BOOSTED_METER
+}
+
+//CHARGE BAR
+itemDef
+{
+	name "charge"
+	rect 290 275 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_CHARGEBAR
+	ownerdraw CG_PLAYER_CHARGE_BAR
+	background "ui/assets/human/buildstat/health.tga"
+}
+
+//CHARGE BAR BG
+itemDef
+{
+	name "chargebg"
+	rect 290 275 60 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_CHARGEBARBG
+	ownerdraw CG_PLAYER_CHARGE_BAR_BG
+	background "ui/assets/human/buildstat/health.tga"
+}
+
+///////////////////
+//DYNAMIC OBJECTS//
+///////////////////
+
+//CROSS
+itemDef
+{
+	name "cross"
+	rect 290 264 12 12
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_CROSS
+	ownerdraw CG_PLAYER_HEALTH_CROSS
+}
+
+//WALLCLIMB
+itemDef
+{
+	name "wallclimb"
+	rect 270 230 100 34
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_WALLCLIMBFORE
+	backcolor A_WALLCLIMBBACK
+	background "ui/assets/alien/wallclimb.tga"
+	ownerdraw CG_PLAYER_WALLCLIMBING
+}
+
+//HEALTH
+itemDef
+{
+	name "health"
+	rect 302 265 25 7
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_HEALTH
+	ownerdraw CG_PLAYER_HEALTH
+}
+
+//ALIEN CLASS ICON
+itemDef
+{
+	name "alien-icon"
+	rect 310 438 25 25
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_ALIENCLASSICON
+	ownerdraw CG_PLAYER_WEAPONICON
+}
+
+//BOLT
+itemDef
+{
+	name "bolt"
+	rect 283 440 15 22.5
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_BOLTRFORE
+	backcolor A_BOLTRBACK
+	background "ui/assets/alien/bolt.tga"
+	ownerdraw CG_PLAYER_BOOST_BOLT
+}
+
+//ORGANS
+itemDef
+{
+	name "organs"
+	rect 345 445 10 15
+	aspectBias ALIGN_CENTER
+	visible MENU_TRUE
+	decoration
+	forecolor A_ORGANS
+	ownerdraw CG_PLAYER_ALIEN_EVOS
+}
+
+//ALIENSENSE
+itemDef
+{
+	name "aliensense"
+	rect 20 20 600 400
+	visible MENU_TRUE
+	decoration
+	ownerdraw CG_PLAYER_ALIEN_SENSE
+}
+
+//SPECTATOR TEXT
+itemDef
+{
+	name "followtext"
+	rect 200 350 240 25
+	foreColor 1 1 1 1
+	aspectBias ALIGN_CENTER
+	textalign ALIGN_CENTER
+	textvalign VALIGN_TOP
+	visible MENU_TRUE
+	decoration
+	textScale .5
+	textStyle ITEM_TEXTSTYLE_SHADOWED
+	ownerdraw CG_FOLLOW
+}
+
+//STAGE REPORT
+itemDef
+{
+	name stagereport
+	textalign ALIGN_LEFT
+	textvalign VALIGN_TOP
+	textscale 0.27
+	rect 5 465 200 30
+	forecolor A_STAGEREPORT
+	decoration
+	visible MENU_TRUE
+	cvartest hud_nonScoreStageReport
+	showCvar {1}
+	ownerdraw CG_STAGE_REPORT_TEXT
+}

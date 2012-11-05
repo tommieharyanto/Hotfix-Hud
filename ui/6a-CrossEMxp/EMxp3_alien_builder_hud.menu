@@ -1,0 +1,19 @@
+#include "ui/menudef.h"
+
+{
+
+#define W 640
+#define H 480
+
+	menuDef
+	{
+		name "alien_builder_hud"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 W H
+		aspectBias ASPECT_NONE
+
+		#include "ui/6a-CrossEMxp/EMxp3_alien_common_hud.menu"
+		#include "ui/common/layout/Cross_alien_builder_hud.menu"
+	}
+}
