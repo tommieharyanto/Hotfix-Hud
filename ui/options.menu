@@ -643,6 +643,7 @@
 	SLIDERX ( voip, "Capture Multiplier:", "cl_voipCaptureMult", 0, 2, 6, 5 )
 	YESNOX  ( voip, "Voice Activation Detection:", "cl_voipUseVAD", play "sound/misc/menu1.wav", 6 )
 	SLIDERX ( voip, "VAD Threshold:", "cl_voipVADThreshold", 0, 0.25, 1, 7 )
+
 //////// RANGE MARKERS
 
     itemDef
@@ -697,7 +698,7 @@
       text "Daemon Options"
       group optionsGrp
       style WINDOW_STYLE_EMPTY
-      rect 0 ((2*BORDER)+TOPBUTT_H+(5*SIDEBUTT_H)) SIDEBUTT_W SIDEBUTT_H
+      rect 0 ((2*BORDER)+TOPBUTT_H+(6*SIDEBUTT_H)) SIDEBUTT_W SIDEBUTT_H
       type ITEM_TYPE_BUTTON
       textalign ALIGN_RIGHT
       textvalign VALIGN_CENTER
