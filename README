@@ -1,5 +1,5 @@
-Hotfix Hud v8.1 RC by E-Mxp.
-For Unvanquished Alpha 10.
+Hotfix Hud v8.2 RC by E-Mxp.
+For Unvanquished Alpha 11.
 
 Initially intended as a hotfix, I have added some more things to help make an awesome hud just a tad more awesome.
 The best part of Superpie's Tweaked GPP HUD was (in my opinion) the centered hud, however, I found out that the centered hud was made to be perfectly aligned if you have a 4:3 resolution (as you can see if you look at the human inventory arrow and more noticeably, in the alien hud).
@@ -25,6 +25,9 @@ MAIN FEATURES:
 NOTES:
 All "hud_" (exept "hud_style") commands get applied immediately, so there is no need to restart.
 Also, if you remember the hud directories, you can change the hud without reloading by entering /reloadhud in the console!
+V8.2 RC: CHANGES FROM V8.1 RC
+	*Applied changes made in Alpha 11.
+
 V8.1 RC: CHANGES FROM V8 RC
 	*Applied changes made in Alpha 10.
 
