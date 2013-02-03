@@ -25,6 +25,9 @@ MAIN FEATURES:
 NOTES:
 All "hud_" (exept "hud_style") commands get applied immediately, so there is no need to restart.
 Also, if you remember the hud directories, you can change the hud without reloading by entering /reloadhud in the console!
+V8.3 RC: CHANGES FROM V8.2 RC
+	*Applied changes made in Alpha 12.
+
 V8.2 RC: CHANGES FROM V8.1 RC
 	*Applied changes made in Alpha 11.
 
