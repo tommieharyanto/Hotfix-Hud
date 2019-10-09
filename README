@@ -23,7 +23,7 @@ MAIN FEATURES:
 * Mostly Unvanquished compatible!
 	
 NOTES:
-All "hud_" (exept "hud_style") commands get applied immediately, so there is no need to restart.
+All "hud_" (except "hud_style") commands get applied immediately, so there is no need to restart.
 Also, if you remember the hud directories, you can change the hud without reloading by entering /reloadhud in the console!
 V8.3 RC: CHANGES FROM V8.2 RC
 	*Applied changes made in Alpha 12.
@@ -39,7 +39,7 @@ V8 RC: CHANGES FROM V7.1
 	*Updated weapon.cfg 's so the 1st person arms show up. (originally changed to add custom crosshairs).
 	*Added red crosshair as requested by JOURNEYMAN.
 	*Removed VSAY changes. (Probably outdated, won't work on multiplayer)
-	*Removed Custom hud colours for now, will add them back later.
+	*Removed Custom hud colors for now, will add them back later.
 
 V7.1: CHANGES FROM V7
 	*Moved hudoptions from the main menu to the options menu.
@@ -56,7 +56,7 @@ V7: CHANGES FROM V7 RC
 	*Minor tweaks.
 
 V7 RC: CHANGES FROM V6.3
-	*Rewritten the hud code to now refer to a color scheme file and a layout file. This means more consistancy between the huds and easier tweaks/fixes.
+	*Rewritten the hud code to now refer to a color scheme file and a layout file. This means more consistency between the huds and easier tweaks/fixes.
 	*Added the very minimalistic Cross Hud!
 	*Added a Custom color scheme file so you can make your own color schemes that will work on all the huds!
 	*Major tweaks.
@@ -78,9 +78,9 @@ V6.2: CHANGES FROM V6.1
 	
 V6.1: CHANGES FROM V6
 	*Small tweak to the tutorial text as the new font made it look squased.
-	*Changed the colorsceme of the Hotbar hud to be more like the default hud.
+	*Changed the color scheme of the Hotbar hud to be more like the default hud.
 	*Added a backdrop to the progressbars in the Hotbar hud for better visability.
-	*Small hotfix for the vanilla hud as the new font missaligned the buildpoints ownerdraw on the alien hud.
+	*Small hotfix for the vanilla hud as the new font misaligned the buildpoints ownerdraw on the alien hud.
 
 V6: CHANGES FROM V5.3
 	*Added the Hotbar hud, a progressbar based hud!
@@ -144,8 +144,8 @@ V2.1: CHANGES FROM V2
 	* HOTFIX1: Fixed the Default Superpie hud.
 	
 V2: CHANGES FROM V1.4
-	* New hudstyle made by yours truly. The Compact hud, this one is also in 3 color scemes.
-	* Changed menu to ask what style of hud you want and then what color sceme for faster selection.
+	* New hudstyle made by yours truly. The Compact hud, this one is also in 3 color schemes.
+	* Changed menu to ask what style of hud you want and then what color scheme for faster selection.
 
 V1.4: CHANGES FROM V1.3
 
@@ -184,14 +184,14 @@ Fixes (only apply in the Centered version of the hud):
 
 Added in:
 
-    * Added an option in the main menu to place the Adv. Good barbs underneath the chrossair.
+    * Added an option in the main menu to place the Adv. Good barbs underneath the crosshair.
     * Option to use the Warrior hud color scheme. Based off the Warrior's Hud by Warrior
     * Option to use the Hellrider hud color scheme. Based off the Hellrider Hud (v1.1) by Hellrider
 
 
 Special thanks to:
 Superpie, for creating the Tweaked GPP HUD I know and love.
-Warrior, for crafting the Warrior's Hud, a hud thats very colorfull and nice.
+Warrior, for crafting the Warrior's Hud, a hud that's very colorful and nice.
 Hellrider, for spawning the Hellrider Hud, a hud that looks quite cool and not black and white yet.
 Meisseli, for making up a very easy way to fix the inventory aspect ratio problem. Try his HUD out!
 Mox, for giving me the idea to add pictures to the main menu. His AdjustableHUD is really good, try it!
@@ -199,4 +199,4 @@ Oticz, for his dot crosshair code. If you still play 1.1, his HUD is highly reco
 GeneralScott, for giving me full permission to use his staminabar code, awesome!
 Kang's hud, who had the most awesome loadingscreen I have seen in Tremulous!
 
-A great help was this site on Icculus.org (http://icculus.org/~phaethon/q3tamenu/q3tamenu.html) and is recommanded to everyone trying to make huds for Tremulous!
+A great help was this site on Icculus.org (http://icculus.org/~phaethon/q3tamenu/q3tamenu.html) and is recommended to everyone trying to make huds for Tremulous!
